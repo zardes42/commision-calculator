@@ -8,6 +8,7 @@ body{
     width: 100vw;
     height: 95vh;
     background-color: whitesmoke;
+    overflow: scroll;
 
 
 }
@@ -87,4 +88,10 @@ body{
 }
 .btn:active{
     transform: translate(-50%,-52%);
+}
+#usr-console{
+    display: block;
+   margin-top: 100px;
+   color: red;
+
 }
