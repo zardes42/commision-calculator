@@ -5,4 +5,36 @@
 }
 body{
     font-family: 'Nunito', sans-serif;
+    width: 100vw;
+    height: 95vh;
+
+}
+.home-page{
+    position: relative;
+    width: inherit;
+    text-align: center;
+}
+.main-header{
+    padding-top: 60px;
+    font-size: 40px;
+    font-weight: 770;
+    transition: .7s;
+    animation: flyInTop;
+    animation-duration: 1s;
+    animation-timing-function: ease-in;
+    animation-fill-mode: backwards;
+}
+@keyframes flyInTop {
+    0%{
+        opacity: 0;
+        transform: translateY(-35px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0px);
+    }
+    
+}
+.main-header:hover{
+    transform: translateY(-10px);
 }
