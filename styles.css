@@ -1,16 +1,13 @@
 *{
     margin: 0;
     padding: 0;
-
 }
 body{
     font-family: 'Nunito', sans-serif;
     width: 100vw;
     height: 95vh;
     background-color: whitesmoke;
-    overflow: scroll;
-
-
+    overflow-y: hidden;
 }
 .home-page{
     position: relative;
@@ -18,8 +15,14 @@ body{
     height: inherit;
     text-align: center;
 }
+.header-container{
+    position: fixed;
+    bottom: 70%;
+    left: 50%;
+    transform: translate(-50%,0%);
+}
 .main-header{
-    padding-top: 60px;
+    padding-top: 180px;
     font-size: 40px;
     font-weight: 770;
     transition: .7s;
@@ -27,6 +30,7 @@ body{
     animation-duration: 1s;
     animation-timing-function: ease-in;
     animation-fill-mode: backwards;
+    white-space: nowrap;
 }
 @keyframes flyInTop {
     0%{
@@ -37,15 +41,14 @@ body{
         opacity: 1;
         transform: translateY(0px);
     }
-    
 }
 .main-header:hover{
     transform: translateY(-10px);
 }
 #main-section{
     position: absolute;
-    height: 50%;
-    width: 60%;
+    height: 300px;
+    width: 35%;
     top: 50%;
     left: 50%;
     transform: translate(-50%,-50%);
@@ -53,7 +56,6 @@ body{
     border-radius: 20px;
     box-shadow: 2px 5px 20px rgba(0, 0, 0, 0.3);
     text-align: center;
-
 }
 .usrInput{
     margin-top: 80px;
@@ -66,7 +68,7 @@ body{
 }
 .btn{
     position: inherit;
-    top: 65%;
+    top: 60%;
     left: 50%;
     transform: translate(-50%,-50% );
     display: block;
@@ -79,9 +81,21 @@ body{
     border: none;
     letter-spacing: 2px;
     text-align: center;
+    animation: fadeInBottom .75s ease-in .6s;
+    animation-fill-mode: backwards;
+}
+@keyframes fadeInBottom {
+    0%{
+        opacity: 0;
+        transform: translate(-50%,30% );
+    }
+    100%{
+        opacity: 1;
+        transform: translate(-50%,-50% );
+    }
 }
 .btn:hover{
-    transform: translate(-50%,-55%);
+    transform: translate(-50%,-57%);
     background-color: #fff;
     color: #000;
     border: 1px solid #000;
@@ -93,5 +107,22 @@ body{
     display: block;
    margin-top: 100px;
    color: red;
+}
+@media only screen and (max-width:800px){
+    .header-container{
+        position:fixed;
+        top: 5%;
+    }
+    .main-header{
+        font-size: 30px;
+        white-space: nowrap;
 
+    }
+    #main-section{
+        width: 70%;
+    }
+    .usrInput{
+        letter-spacing: 2px;
+    }
+    
 }
